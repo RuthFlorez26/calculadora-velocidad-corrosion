@@ -1,0 +1,238 @@
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1c1818;
+  margin: 0;
+  padding: 40px;
+}
+
+h1, h2, h3 {
+  color: #0d4771;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border: 1px solid #00375e;
+  border-radius: 12px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 12px;
+  color: #8f8e8ea1;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #5f6f7a;
+}
+
+.formula {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.formula img {
+  max-width: 350px;
+  width: 100%;
+}
+
+.variables p {
+  font-size: 14px;
+  margin: 6px 0;
+  padding: 0 10px;
+}
+
+.small-note {
+  font-size: 6px;
+  color: #8a98a1;
+  font-style: italic;
+  margin-top: 20px
+}
+
+.notes {
+  padding: 0 10px;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #5f6f7a;
+}
+
+.calculator-box {
+  margin-top: 32px;
+  padding: 28px;
+  border-radius: 12px;
+  border: 2px solid #2c5d7c;
+  background: #f9fafb;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.787);
+}
+
+.calculator-box label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.calculator-box input {
+  width: 97%;
+  padding: 10px;
+  margin: 6px 0 16px;
+  border: 1px solid #c9d3da;
+  border-radius: 6px;
+}
+
+.calculator-box input:focus {
+  outline: none;
+  border-color: #9d1919;
+}
+
+button {
+  width: 100%;
+  background-color: #2c5d7c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1f3a4d;
+}
+
+.result {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e7d5b;
+}
+
+.methodology {
+  margin-top: 28px;
+}
+
+.method-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.steps {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #c9d3da;
+  flex: 1.2;
+}
+
+.illustration {
+  flex: 0.8;
+  text-align: center;
+}
+
+.illustration img {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.illustration figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #5f6f7a;
+  font-style: italic;
+}
+
+.limitations p {
+  margin: 6px 0;
+  font-size: 10px;
+}
+
+.limitations .good {
+  color: #2f6f4f;
+}
+
+.limitations .bad {
+  color: #9a4a4a;
+}
+
+.references {
+  margin-top: 12px;
+  color: #353535
+}
+
+.references p {
+  font-size: 12px;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+  body {
+    padding: 24px;
+  }
+
+  .container {
+    padding: 28px;
+  }
+
+  .method-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .calculator-box input {
+    width: 240px;
+  }
+
+  .formula img {
+    max-width: 260px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 11px;
+  }
+
+  .subtitle {
+    font-size: 10px
+  }
+  
+}
