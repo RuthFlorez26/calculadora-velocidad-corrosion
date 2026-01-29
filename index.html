@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de velocidad de corrosión</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+         <header>
+            <p class="tagline">Calcula cuánto material se pierde por unidad de área y tiempo</p>
+            <h1>Calculadora de velocidad de corrosión</h1>
+            <p class="subtitle">Método gravimétrico o de pérdida de peso</p>
+        </header>
+        
+        <!-- Ecuación -->
+        <section class="formula">
+            <img src="./js/formula.png" alt="Fórmula velocidad de corrosión">
+        </section>
+
+        <!-- Variables -->
+        <section class="variables">
+            <p><strong>p<sub>i</sub></strong>: Peso inicial de la muestra metálica en gramos (g)</p>
+            <p><strong>p<sub>f</sub></strong>: Peso final de la muestra metálica en gramos (g)</p>
+            <p><strong>A</strong>: Área de muestra expuesta al medio corrosivo (cm²)</p>
+            <p><strong>t</strong>: Tiempo de exposición de la misma al medio corrosivo en horas (h)</p>
+            <p class="small-note">*La pérdida de masa se convierte de gramos a miligramos para una mejor resolución numérica.</p>
+        </section>
+
+        <!-- Notas técnicas -->
+        <section class="notes">
+            <p>A considerar:</p>
+            <ul>
+                <li>Conforme a la práctica estándar ASTM G31 - Standard Practice for Laboratory Immersion Corrosion Testing.</li>
+                <li>Supone corrosión uniforme y condiciones de exposición constantes.</li>
+                <li>Diseñado para una evaluación rápida en laboratorio.</li>
+            </ul>
+        </section>
+
+        <!-- Calculadora -->
+        <section class="calculator-box">
+            <h2>Calculadora de velocidad de corrosión</h2>
+
+            <label>Peso inicial (g)</label>
+            <input type="number" id="pi" step="0.001">
+
+            <label>Peso final (g)</label>
+            <input type="number" id="pf" step="0.001">
+
+            <label>Área expuesta (cm²)</label>
+            <input type="number" id="area" step="0.01">
+
+            <label>Tiempo de exposición (h)</label>
+            <input type="number" id="time" step="0.1">
+
+            <button onclick="calculate()">Calcular</button>
+
+            <p class="result">La velocidad de corrosión es: <span id="rate">—</span> mg/cm²*h
+            </p>
+        </section>
+
+        <!-- Pasos, imagen, referencias-->
+        <section class="methodology">
+            <div class="method-row">
+                
+                <div class="steps">
+                    <h3>Pasos para obtener los datos</h3>
+                    <ol>
+                        <li>Medir las dimensiones de la muestra en cm.</li>
+                        <li>Calcular el área de la muestra.</li>
+                        <li>Registrar el peso inicial en gramos.</li>
+                        <li>Exponer la muestra al medio.</li>
+                        <li>Calcular el tiempo de exposición de la muestra en el medio.</li>
+                        <li>Limpiar y medir el peso final en gramos.</li>
+                        <li>Ingresar datos en la calculadora</li>
+                    </ol>
+                </div>
+
+                <figure class="illustration">
+                        <img src="./js/cupon.png" alt="Ejemplo de cupón de corrosión en laboratorio">
+                        <figcaption>Figura 1. Ensayo de inmersión con cupón metálico conforme a ASTM G31.</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- Limitaciones -->
+        <section class="limitations">
+            <p class="good">✔ Cuantifica la pérdida de masa real medida.</p>
+            <p class="bad">✖ No predice la corrosión futura.</p>
+            <p class="bad">✖ No evalúa los mecanismos de corrosión.</p>
+            <p class="bad">✖ No compara entornos corrosivos.</p>
+        </section>
+
+        <!-- Referencias -->
+        <footer class="references">
+            <p><strong>Referencias</strong></p>
+            <p>Arwati, I., & Ifani, F. (2022). <em>Corrosion Rate Analysis of JIS G-3141 Steel for Automotive Inner Wheel House Production with Weight Loss Method</em>. World Chemical Engineering Journal. https://doi.org/10.48181/wcej.v6i1.14377</p>
+            <p>Pérez, E., Gutiérrez, J., Ortega, L., & Mirabal, J. (2018). <em>Aplicación de softwares estadísticos y modelos matemáticos para la evaluación de la velocidad de corrosión en el acero</em>, 21, 179–186. https://doi.org/10.31910/rudca.v21.n1.2018.676</p>
+        </footer>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
